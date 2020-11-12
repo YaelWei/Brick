@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Brick Engravement</title>
+    <script defer src="script.js"></script>
+    <!-- styles css -->
+    <style>
+        .div {
+            border-style: solid;
+            width: 100%;
+            font-family:verdana
+        }
+        .container {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .form{
+            padding-top: 20px;
+        }
+        label {
+            font-size: 11px
+        }
+        .limit-label {
+            font-size:10px ;
+            color: red;
+        }
+        img {
+            width: 340px;
+            height:166px;
+            border-style: groove;
+        }
+        .brickContainer {
+            position: relative;
+            width: 350px;
+            height:166px;
+            color: black;
+            overflow: hidden;
+            flex-direction: column;
+        }
+        .brickLine {
+            position: absolute;
+            display: table-cell;
+            white-space: nowrap;
+            overflow: hidden;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);   
+        }
+        #brickLine2 {
+            top: 50px;
+            left: 50%;
+        }
+        #brickLine3 {
+            top: 70px;
+            left: 50%;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+        <div class="div">
+            <div class="container">
+                <div class="form" id="form">
+                    <label for="brick-form1" class="enter-label">Enter your text:</label><br>
+                    <input type="text" id="brick-form1"/><br><br>
+                    <input type="text" id="brick-form2"/><br><br>
+                    <input type="text" id="brick-form3"/> <br>
+                    <label for="brick-form3" class="limit-label">20 character limit per line</label>
+                </div>
+                <div class="brickContainer">
+                    <img src="images/brick.jpg" alt="brick">
+                    <h3 class="brickLine" id="brickLine1" ></h3>
+                    <h3 class="brickLine" id="brickLine2"></h3>
+                    <h3 class="brickLine" id="brickLine3"></h3>
+                </div>
+            </div>
+        </div>  
+    </main>
+  </body>
+</html>
